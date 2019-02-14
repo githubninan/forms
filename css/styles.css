@@ -1,3 +1,18 @@
 #letter {
   display: none;
 }
+#textarea {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.uppercaseText{
+  text-transform: uppercase;
+}
+
+#order-form {
+  margin-top: 100px;
+}
+
+#receipt{
+  display: none ;
+}
