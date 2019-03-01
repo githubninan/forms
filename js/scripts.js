@@ -9,8 +9,24 @@ event.preventDefault();
 
   $("button#click-submit").click(function() {
 
-$("textarea#textInput").addClass("uppercaseText");
+//  $("textarea#text-input").addClass("uppercaseText");
+
+var textInput = $("#text-input").val();
+var words=textInput.split(' ');
+var newArray = words.map(function (word) {
+  if (word.length>=3){
+    return word;
+  }
 });
+console.log(newArray);
+newArray.reverse();
+console.log(newArray);
+newArray.join();
+alert (newArray);
+});
+
+
+
 
 $("#order form").submit(function(event) {
 var nameInput = $("input#fullName").val();
