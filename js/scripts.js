@@ -1,3 +1,7 @@
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
 $(document).ready(function() {
 $("#blanks form").submit(function(event) {
 var person1Input = $("input#inputName").val();
@@ -25,6 +29,35 @@ newArray.join();
 alert (newArray);
 });
 
+$("button#submit").click(function() {
+var stringInput = $("#string-input").val();
+var words = stringInput;
+console.log(words);
+
+var dash ="-";
+ for (index = 0; index<words.length; index +=1)
+ {
+    var symbol = words[index];
+    if (symbol == "a" || symbol == "e" || symbol == "i" || symbol == "o" ||symbol == "u" )
+    {
+        words = words.replaceAt(index,"-");
+        //alert ("ee");
+    }
+ }
+alert (words);
+//     var puzzle = words.map(function(phrase)
+//      {
+//       if (phrase == "a")
+//        {
+//         dash +=phrase;
+//       };
+// });
+// console.log (puzzle);
+});
+
+}); //document.ready
+
+
 
 
 
@@ -39,4 +72,3 @@ $("div#order").hide();
 $("div#receipt").fadeIn();
 event.preventDefault();
   });
-});
